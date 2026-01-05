@@ -1,0 +1,122 @@
+/* src/app/theme.css - Modern Vibrant Theme */
+
+:root {
+  /* Primary Colors - Modern Gradients */
+  --color-primary: #0d6efd;
+  --color-primary-dark: #0b5ed7;
+  --color-primary-light: #6fa9ff;
+  --color-on-primary: #ffffff;
+  
+  /* Accent Colors */
+  --color-accent: #ff6b6b;
+  --color-accent2: #4ecdc4;
+  --color-accent3: #45b7d1;
+  --color-accent4: #96ceb4;
+  
+  /* Status Colors - Vibrant */
+  --color-success: #00d26a;
+  --color-success-light: #4ade80;
+  --color-warning: #ffa500;
+  --color-warning-light: #ffcc00;
+  --color-danger: #ff3838;
+  --color-danger-light: #ff6b6b;
+  --color-info: #00d4ff;
+  
+  /* Surface Colors */
+  --color-surface: #ffffff;
+  --color-on-surface: #1a1c1e;
+  --color-surface-variant: #f0f2f5;
+  --color-on-surface-variant: #6c757d;
+
+  --color-background: #f5f7fa;
+  --color-on-background: #1a1c1e;
+  
+  /* Border Radius - Modern */
+  --border-radius-lg: 1.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-sm: 0.5rem;
+  
+  /* Typography */
+  --font-sans: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+/* Redefine Bootstrap colors with our theme */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  border-color: var(--color-primary) !important;
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover {
+  filter: brightness(95%);
+}
+
+.bg-light {
+  background-color: var(--color-background) !important;
+}
+
+.text-white {
+  color: var(--color-on-primary) !important;
+}
+
+.card {
+  border-radius: var(--border-radius-lg);
+  border: none;
+  background-color: var(--color-surface);
+}
+
+.form-control {
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-surface-variant);
+  border: 1px solid var(--color-surface-variant);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
+}

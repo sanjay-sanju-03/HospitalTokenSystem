@@ -1,0 +1,132 @@
+# Hospital Token System - Dependencies
+# 
+# Note: This is a Node.js project using npm, not Python
+# Use 'npm install' to install all dependencies from package.json
+# This file is for reference only
+#
+# Last Updated: January 6, 2026
+# Node.js Version: 18+ (LTS recommended)
+# npm Version: 9+ or yarn equivalent
+
+=== RUNTIME DEPENDENCIES ===
+
+# Core Framework
+next==16.1.1              # Next.js 16.1.1 - React framework with App Router
+react==19.2.3            # React 19.2.3 - UI library
+react-dom==19.2.3        # React DOM - DOM rendering
+
+# Database
+better-sqlite3==12.5.0   # SQLite database driver with sync operations
+
+# UI & Styling
+bootstrap==5.3.8         # Bootstrap 5.3.8 - CSS framework for responsive design
+
+# Real-time Communication
+socket.io==4.8.3         # WebSocket server for real-time events
+socket.io-client==4.8.3  # WebSocket client for real-time updates
+
+# Utilities
+dotenv==17.2.3           # Environment variable management
+server-only==0.0.1       # Ensures code runs only on server side
+twilio==5.11.1           # SMS service integration (optional)
+
+=== DEVELOPMENT DEPENDENCIES ===
+
+# TypeScript & Type Safety
+typescript==5             # TypeScript language
+@types/node==20          # Node.js type definitions
+@types/react==19         # React type definitions
+@types/react-dom==19     # React DOM type definitions
+@types/better-sqlite3==7.6.13  # SQLite type definitions
+
+# Build & Bundling
+@swc/core==1.15.8        # Fast JavaScript compiler (Turbopack uses this)
+babel-plugin-react-compiler==1.0.0  # React compiler for optimization
+
+# Linting
+eslint==9                # JavaScript linter
+eslint-config-next==16.1.1  # ESLint config for Next.js
+
+# Task Management
+concurrently==9.2.1      # Run multiple npm scripts concurrently
+nodemon==3.1.11          # Auto-restart development server on file changes
+ts-node==10.9.2          # Run TypeScript files directly
+
+=== INSTALLATION ===
+
+To install all dependencies, run:
+  npm install
+
+Or if using yarn:
+  yarn install
+
+=== RUNNING THE PROJECT ===
+
+Development:
+  npm run dev              # Start development server (http://localhost:3000)
+  npm run dev:with-socket  # Start dev server with WebSocket support
+
+Production:
+  npm run build            # Build for production
+  npm run start            # Start production server
+
+Linting:
+  npm run lint             # Run ESLint
+
+=== CORE FEATURES BY DEPENDENCY ===
+
+• Next.js (16.1.1)
+  - Server-side rendering, API routes, file-based routing
+  - App Router for modern page structure
+  - Automatic code splitting and optimization
+
+• React (19.2.3)
+  - Component-based UI
+  - State management with hooks
+  - Modern React features
+
+• Bootstrap (5.3.8)
+  - Responsive grid system
+  - Pre-built components
+  - CSS utilities for styling
+
+• SQLite (better-sqlite3)
+  - Persistent token storage
+  - Queue management
+  - Doctor/department data
+  - OTP verification
+
+• Socket.io (4.8.3)
+  - Real-time queue updates
+  - Live notifications
+  - WebSocket fallback
+
+• Twilio (5.11.1)
+  - SMS notifications for tokens
+  - Optional integration (demo mode works without it)
+
+• TypeScript (5)
+  - Type safety
+  - Better developer experience
+  - Catch errors at compile time
+
+=== OPTIONAL INTEGRATIONS ===
+
+SMS Service (Twilio):
+  - Create .env.local with:
+    TWILIO_ACCOUNT_SID=your_sid
+    TWILIO_AUTH_TOKEN=your_token
+    TWILIO_PHONE_NUMBER=your_number
+  - Without these, SMS runs in demo mode (prints to console)
+
+WebSocket Server:
+  - Optional socket-server.ts for real-time updates
+  - Alternative to polling (5-second refresh currently used)
+
+=== NOTES ===
+
+• This is a JavaScript/Node.js project, not Python
+• Use 'npm install' instead of pip/pip3
+• Dependencies are locked in package-lock.json for consistency
+• All dev dependencies are optional for production builds
+• The project is optimized for modern browsers (ES2020+)
