@@ -35,8 +35,6 @@ npm install
 npm run dev
 ```
 
-Application available at: **http://localhost:3000**
-
 ### Available Commands
 
 ```bash
@@ -63,12 +61,6 @@ See [requirements.txt](requirements.txt) for a complete list of all dependencies
 Doctors are auto-seeded with random passwords. Check server logs for passwords.
 - Departments: Cardiology, Neurology, Orthopedics, Pediatrics, General
 
-## 📱 Quick Links
-
-- **Patient Kiosk**: http://localhost:3000/kiosk/language-select
-- **Staff Dashboard**: http://localhost:3000/staff/login
-- **Display Screen**: http://localhost:3000/display
-- **Analytics**: http://localhost:3000/analytics
 
 ## 🏗️ Architecture
 
@@ -189,4 +181,4 @@ Built for healthcare management. Use responsibly.
 
 ---
 
-**Version**: 1.0.0 | **Status**: ✅ Production Ready | **Last Updated**: Jan 6, 2026
+**Version**: 1.0.0 | **Status**: ✅ Production Ready | **Last Updated**: Jan 10, 2026
